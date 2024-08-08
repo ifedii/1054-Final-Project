@@ -275,10 +275,11 @@ main .product-cards .card .details .order .price{
     /* border: solid; */
 }
 
-/* styles the add to cart button */
-main .product-cards .card .details .order button{
+main .product-cards .card .details .order .addToCart{
     /* ?margin-top: 0.3rem; */
     /* align-self: end; */
+    text-align: center;
+    font-size: 12px;
     background-color: #0077ED;;
     border-radius: 5px;
     font-weight: bolder;
@@ -290,7 +291,7 @@ main .product-cards .card .details .order button{
 }
 
 /* shrinks the the add to cart button */
-main .product-cards .card .details .order button:hover{
+main .product-cards .card .details .order .addToCart:hover{
     background-color: #005499;
     border: solid #005499;
     color: #f8f8f8;
