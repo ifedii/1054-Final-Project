@@ -1,0 +1,305 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    min-height: 100vh;
+}
+header{
+    position: sticky;
+    top: 0;left: 0;right: 0;
+    padding: 0px 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    background-color: #a0a0a0;
+    height: 100px;
+    font-family: 'Roboto', sans-serif;
+}
+header .logo{
+    text-align: center;
+    align-content: center;
+    width: 150px;
+    height: 100%;
+    text-decoration: none;
+}
+header .logo img{
+    height: 100%;
+    width: 100%;
+}
+header nav ul{
+    list-style: none;
+}
+header nav ul li{
+    position: relative;
+    float: left;
+}
+header nav .ul li:nth-child(n){
+    border-right: 1px solid black;
+}
+header nav .ul li:nth-last-child(1){
+    border-right: 0px;
+}
+header nav .notUl li:nth-child(n){
+    border-right: 0px solid black;
+}
+header nav ul li a{
+    font-size: 20px;
+    padding: 20px;
+    color: #0e0e0e;
+    display: block;
+    text-decoration: none;
+}
+header nav ul li a:hover{ 
+    background-color: gray;
+}
+header nav ul li ul{
+    position: absolute;
+    left: 0;
+    width: 200px;
+    background-color: #e0e0e0;
+    display: none;
+}
+header nav ul li ul li{
+    width: 100%;
+    border-top: 1px solid black;
+}
+header nav ul li:hover > ul{
+    display: initial;
+}
+#menu-bar{
+    display: none;
+}
+header label{
+    cursor: pointer;
+    display: none;
+    font-family: 'Roboto', sans-serif;
+    font-size: 30px;
+}
+
+main{
+    width: 100%;
+}
+main .vid{
+    height: 750px;
+    display: flex;
+    align-items: center;
+    background-color: black;
+}
+main video{
+    width: 100%;
+    height: 100%;
+}
+main .phoneImgs {
+    display: flex;
+}
+
+main .img {
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+}
+
+main .img-images {
+    display: flex;
+    height: auto;
+    transition: transform 0.5s ease-in-out;
+}
+
+main .img img {
+    width: 100%;
+}
+main .button{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Roboto',sans-serif;
+}
+main .button a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: gray;
+    width: 20%;
+    height: 50px;
+    text-decoration: none;
+    border: 5px solid white;
+    border-radius: 50px;
+    color: white;
+}
+main .button a:hover{
+    background-color: black;
+    color: white;
+    transition: 0.3s ease-in-out;
+}
+
+footer{
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    background-color: #e0e0e0;
+    align-items: center;
+}
+
+/* styling for the get email form -> flexbox*/
+.get-email form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2rem;
+}
+
+/* style the label "SUBSCRIBE TO OUR EMAIL LIST" */
+.get-email form label{
+    font-weight: bold;
+    font-size: 1.7rem;
+    margin: 1.2rem;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    color: #0e0e0e;
+}
+
+/* styles the email input */
+.get-email form input[type="email"]{
+    width: 60vw;
+    height: 2.5rem;
+    margin-bottom: 1.2rem;
+    border: 1px solid black;
+    color: #0e0e0e;
+    padding: 0.4rem;
+    border-radius: 5px;
+    transition: 0.5s;
+}
+
+/* adds a glow and border effect on the email input */
+.get-email form input[type="email"]:hover{
+    border: 1px solid #008CFF;
+    box-shadow: 0 0 10px #005499
+}
+
+/* styling for the subscribe button */
+.get-email form button{
+    font-size: 1.2rem;
+    padding: 0.6rem;
+    color: white;
+    background-color: black;
+    border-radius: 5px;
+    transition: 0.2s;
+    border: none;
+}
+
+/* shrinks and changes the border of the subscribe button */
+.get-email form button:hover{
+    /* border: 1px solid #008CFF; */
+    border: 1px solid black ;
+    box-shadow: 0 0 10px #005499;
+    background-color: #e0e0e0;
+    color: #0e0e0e;
+
+}
+
+/* footer navigation -> flexbox */
+footer .footer-nav{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+/* general styling for the footer */
+footer .footer-nav .footer-content{
+    display: flex;
+    flex-direction: column;
+}
+
+/* styles the unodored lists in each footer content container */
+footer .footer-nav .footer-content ul{
+    list-style-type: none;
+    margin: 0.5rem 0 5rem 0;
+}
+
+/* styles each element of the of the unordered list */
+footer .footer-nav .footer-content h2{
+    text-decoration-line: underline;
+    text-decoration-thickness: 5px;
+    font-family: 'Roboto', sans-serif   ;
+}
+
+footer .footer-nav .footer-content ul li{
+    margin-top: 0.5rem;
+}
+footer .footer-nav .footer-content ul li a{
+    color: #0e0e0e;
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+}
+/* resets the links in the unodered list */
+footer .footer-nav .footer-content ul a{
+    color: white;
+    text-decoration: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+@media(max-width: 1440px){
+    header nav ul li a{
+        font-size: 30px;
+    }
+    main video{
+        width: 100%;
+        height: fit-content;
+    }
+    main .productCase{
+        display: none;
+    }
+    main .vid{
+        height: fit-content;
+    }
+}
+
+@media(max-width: 950px){
+    header {
+        padding: 20px;
+    }
+    header label{
+        display: initial;
+    }
+    header nav{
+        position: absolute;
+        top:100%; left: 0; right: 0;
+        background-color: #e0e0e0;
+        display: none;
+    }
+    header nav ul li{
+        width: 100%;
+        border-top: 1px solid black;
+    }
+    header nav ul li ul{
+        position: relative;
+        width: 100%;
+    }
+    header nav ul li ul li{
+        background-color: #e0e0e0;
+        padding-left: 5%;
+    }
+    #menu-bar:checked ~ nav{
+        display: initial;
+    }
+    main video{
+        width: 100%;
+        height: fit-content;
+    }
+    
+}

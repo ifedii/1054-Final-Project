@@ -1,0 +1,456 @@
+/* COLORS:
+    WHITE: a0a0a0
+    BLACK: 0E0E0E*/
+
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: #f8f8f8;
+}
+
+h1,h2,h3,h4,h5,h6{
+    font-family: "Montserrat", sans-serif;
+
+}
+
+p, a,li{
+    font-size: 1.2em;
+    font-family: "Roboto", sans-serif;
+    text-decoration: none;
+
+}
+
+.button{
+    margin-right: 15px;
+    background-color: #0077ED;
+    color: #0e0e0e;
+    padding: 5px;
+    font-weight: bolder;
+    text-align: center;
+    border: none;
+    width: fit-content;
+
+}
+
+.btn2{
+    margin-right: 15px;
+    background-color: white;
+    color: black;
+    padding: 10px;
+    font-weight: bolder;
+    text-align: center;
+    border: none;
+    width: fit-content;
+    border-radius: 10px;
+
+}
+
+.btn2:hover{
+    background-color: #005499;
+    color: #f8f8f8;
+}
+
+header{
+    position: sticky;
+    top: 0;left: 0;right: 0;
+    padding: 0px 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    background-color: #a0a0a0;
+    height: 100px;
+    font-family: 'Roboto', sans-serif;
+}
+header .logo{
+    text-align: center;
+    align-content: center;
+    width: 150px;
+    height: 100%;
+    text-decoration: none;
+}
+header .logo img{
+    height: 100%;
+    width: 100%;
+}
+header nav ul{
+    list-style: none;
+}
+header nav ul li{
+    position: relative;
+    float: left;
+}
+header nav ul li:nth-child(n){
+    border-right: 1px solid black;
+}
+header nav ul li:nth-last-child(1){
+    border-right: none;
+}
+header nav ul li .ul li:nth-child(n){
+    border-right: 0;
+}
+header nav ul li a{
+    font-size: 20px;
+    padding: 20px;
+    color: #0e0e0e;
+    display: block;
+    text-decoration: none;
+}
+header nav ul li a:hover{
+    background-color: gray;
+}
+header nav ul li ul{
+    position: absolute;
+    left: 0;
+    width: 200px;
+    background-color: #a0a0a0;
+    display: none;
+}
+header nav ul li ul li{
+    width: 100%;
+    border-top: 1px solid black;
+}
+header nav ul li:hover > ul{
+    display: initial;
+}
+#menu-bar{
+    display: none;
+}
+header label{
+    cursor: pointer;
+    display: none;
+    font-family: 'Roboto', sans-serif;
+    font-size: 30px;
+}
+/* MASTHEAD */
+.masthead{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    height: 40vh;
+    margin: 20px 0;
+    padding-bottom: 20px;
+    /*border: solid;*/
+    /*background-color: red;*/
+}
+
+/* div for the h2, p & button*/
+.masthead div:nth-child(1){
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /*align-items: center;*/
+    /*text-align: left;*/
+    /*border: solid;*/
+    padding: 5% 20%;
+    line-height: 1.5
+}
+
+.masthead div:nth-child(2){
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.masthead div:nth-child(2) img{
+    height: 90%;
+}
+
+/* MAIN */
+main{
+    display: grid;
+    background-color: #EEF0F1;
+    /*margin: 20px ;*/
+    /*border: solid;*/
+}
+
+main section:nth-child(1){
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2% 10%;
+}
+
+main section:nth-child(2){
+    display: flex;
+    flex-direction: column;
+    margin: 0 5%;
+    /*border: solid;*/
+
+}
+/* NAVIGATION FOR PRODUCTS*/
+
+main section:nth-child(2) ul{
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+    /*border: solid;*/
+    border-radius: 5px;
+    padding: 1em;
+    /*margin: 0 5%;*/
+}
+/*SEARCH FORM*/
+main section:nth-child(2) form{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    margin: 1.5rem;
+}
+
+/*SEARCH FORM INPUT*/
+main section:nth-child(2) form input{
+    width: 40vw;
+    border: 1px solid #0e0e0e;
+    color: #0e0e0e;
+    margin: 0;
+    padding: 0.5rem;
+    font-size: 1rem;
+    transition: 0.5s;
+}
+
+/* styling for the products card container */
+main section:nth-child(2) .product-cards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 60%;
+    align-self: center;
+    /*border: solid;*/
+
+}
+/* styles individual cards */
+main .product-cards .card{
+    /*width: auto;*/
+    max-width: 45%;
+    min-width: 200px;
+    flex-grow: 1;
+    padding: .5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f8f8f8;
+    margin: 0.5rem;
+    transition: 0.3s;
+    border-radius: 15px;
+}
+
+/* animates a glover effect on each card */
+main .product-cards .card:hover{
+    border: 1px solid #0e0e0e;
+    box-shadow: 0 0 10px #005499;
+}
+
+/* style for card details also a flex box */
+main .product-cards .card .details{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1rem;
+
+}
+
+main .product-cards .card .details .product-name{
+    font-weight: bold;
+}
+
+
+
+/* styliing for the price and add to cart button container */
+main .product-cards .card .details .order{
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 0.6rem;
+    width: 80%;
+    /*border: solid;*/
+}
+
+/* adds a margin to the price */
+main .product-cards .card .details .order .price{
+    margin-right: 0.4rem;
+    /* border: solid; */
+}
+
+/* styles the add to cart button */
+main .product-cards .card .details .order button{
+    /* ?margin-top: 0.3rem; */
+    /* align-self: end; */
+    background-color: #0077ED;;
+    border-radius: 5px;
+    font-weight: bolder;
+    color: black;
+    border: solid #0077ED;;
+    padding: 0.3rem;
+    transition: 0.2s;
+
+}
+
+/* shrinks the the add to cart button */
+main .product-cards .card .details .order button:hover{
+    background-color: #005499;
+    border: solid #005499;
+    color: #f8f8f8;
+    /* box-shadow: 0 0 10px #008CFF  */
+}
+
+/* styling for the product images */
+main .product-cards .card img{
+    width: 70%;
+    /*border: solid red;*/
+    height: auto;
+}
+
+/*FOOTER*/
+footer{
+    display: flex;
+    flex-direction: column;
+    background-color: #e0e0e0;
+    align-items: center;
+}
+
+/* styling for the get email form -> flexbox*/
+.get-email form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2rem;
+}
+
+/* style the label "SUBSCRIBE TO OUR EMAIL LIST" */
+.get-email form label{
+    font-weight: bold;
+    font-size: 1.7rem;
+    margin: 1.2rem;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    color: #0e0e0e;
+}
+
+/* styles the email input */
+.get-email form input[type="email"]{
+    width: 60vw;
+    height: 2.5rem;
+    margin-bottom: 1.2rem;
+    border: 1px solid black;
+    color: #0e0e0e;
+    padding: 0.4rem;
+    border-radius: 5px;
+    transition: 0.5s;
+}
+
+/* adds a glow and border effect on the email input */
+.get-email form input[type="email"]:hover{
+    border: 1px solid #008CFF;
+    box-shadow: 0 0 10px #005499
+}
+
+/* styling for the subscribe button */
+.get-email form button{
+    font-size: 1.2rem;
+    padding: 0.6rem;
+    color: white;
+    background-color: black;
+    border-radius: 5px;
+    transition: 0.2s;
+    border: none;
+}
+
+/* shrinks and changes the border of the subscribe button */
+.get-email form button:hover{
+    /* border: 1px solid #008CFF; */
+    border: 1px solid black ;
+    box-shadow: 0 0 10px #005499;
+    background-color: #e0e0e0;
+    color: #0e0e0e;
+
+}
+
+/* footer navigation -> flexbox */
+footer .footer-nav{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+/* general styling for the footer */
+footer .footer-nav .footer-content{
+    display: flex;
+    flex-direction: column;
+}
+
+/* styles the unodored lists in each footer content container */
+footer .footer-nav .footer-content ul{
+    list-style-type: none;
+    margin: 0.5rem 0 5rem 0;
+}
+
+/* styles each element of the of the unordered list */
+footer .footer-nav .footer-content h2{
+    text-decoration-line: underline;
+    text-decoration-thickness: 5px;
+    font-family: 'Roboto', sans-serif   ;
+}
+
+footer .footer-nav .footer-content ul li{
+    margin-top: 0.5rem;
+}
+footer .footer-nav .footer-content ul li a{
+    color: #0e0e0e;
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+}
+/* resets the links in the unodered list */
+footer .footer-nav .footer-content ul a{
+    color: white;
+    text-decoration: none;
+}
+
+
+
+@media(max-width: 950px){
+    header {
+        padding: 20px;
+    }
+    header label{
+        display: initial;
+    }
+    header nav{
+        position: absolute;
+        top:100%; left: 0; right: 0;
+        background-color: #e0e0e0;
+        display: none;
+    }
+    header nav ul li{
+        width: 100%;
+        border-top: 1px solid black;
+    }
+    header nav ul li ul{
+        position: relative;
+        width: 100%;
+    }
+    header nav ul li ul li{
+            background-color: #e0e0e0;
+        padding-left: 5%;
+    }
+    #menu-bar:checked ~ nav{
+        display: initial;
+    }
+    
+}
+
+@media screen and (max-width: 770px) {
+    .masthead{
+        display: flex;
+        flex-direction: column;
+        height: auto;
+    }
+
+    .masthead div:nth-child(2) img{
+        width: 50%;
+    }
+
+}
